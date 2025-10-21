@@ -1,10 +1,21 @@
-# -daily-knowledge-bot
-每日知识推送机器人
-# 1. 创建隐藏的.github/workflows目录（注意-p后面有空格）
-mkdir -p .github/workflows
+# 每日知识推送机器人
 
-# 2. 创建主程序文件（一次touch多个文件，不用重复写touch）
-touch knowledge_bot.py requirements.txt README.md
+基于GitHub Actions的自动化知识推送系统，每天定时发送多种知识内容到邮箱。
 
-# 3. 创建工作流文件（注意是点github，不是下划线）
-touch .github/workflows/daily-bot.yml
+## 功能特点
+- 📰 新闻摘要
+- 🗣️ 英语学习
+- 🔧 编程技巧
+- 📚 书籍推荐
+- 💫 励志名言
+
+## 使用方法
+1. 配置Secrets（邮箱信息）
+2. 系统会自动每天上午9点运行
+3. 在邮箱查收知识摘要
+
+## 配置说明
+需要在GitHub Secrets中设置以下环境变量：
+- EMAIL_SENDER：发送邮箱
+- EMAIL_PASSWORD：邮箱SMTP授权码  
+- EMAIL_RECEIVER：接收邮箱
